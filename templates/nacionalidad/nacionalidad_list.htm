@@ -1,0 +1,45 @@
+{%extends 'base/baseHabitacion.html'%}
+
+
+{% block content %}
+<a class="btn btn-success" href="{% url 'nacionalidad_agregar' %}">Agregar
+</a>
+
+
+
+    {% if object_list %}
+    <table class= "table table-bordered">    
+    <thead>
+      <tr>
+        <td>#</td>
+        <td> Pais </td>
+        <td> Nacionalidad </td>
+        <td> Acciones </td>
+  
+      </tr>
+    </thead>
+    <tbbody>
+
+    {% for nacionalidad in object_list %}
+    <tr>
+
+      <td> {{nacionalidad.id_Nacionalidad}} </td>
+      <td> {{nacionalidad.pais}} </td>
+      <td> {{nacionalidad.nacionalidad}} </td>
+      <td>
+        <a class="btn btn-primary" href="{% url 'nacionalidad_edit' nacionalidad.id_Nacionalidad %}">Editar</a>
+        <a class="btn btn-danger" href="{% url 'nacionalidad_delete' nacionalidad.id_Nacionalidad %}">Eliminar</a>
+      </td>
+        
+    
+    </tr>
+    {% endfor %}
+    {% else %}
+    <h1>No se ha encontrado información</h1>
+    {% endif %}
+  </tbbody>
+</table>
+
+
+
+{% endblock %}
