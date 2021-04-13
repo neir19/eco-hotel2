@@ -1,5 +1,5 @@
 from django import forms
-from apps.alquiler.models import Alquiler, Registrador, Estado
+from apps.alquiler.models import Alquiler, Registrador
 
 class AlquilerForm(forms.ModelForm):
   class Meta:
@@ -68,23 +68,5 @@ class RegistradorForm(forms.ModelForm):
             'telefono': forms.TextInput(attrs={'class': 'form-control'}),
             'estado': forms.Select(attrs={'class': 'form-control'}),
             'observacion': forms.Textarea(attrs={'class': 'form-control'}),
-            
-        }
-class EstadoForm(forms.ModelForm):
-  class Meta:
-    model=Estado
-
-    fields = [
-
-            'Nombre',
-            
-    ]
-
-    labels = {
-            'Nombre': 'nombre',
-            
-        }
-    widgets = {
-            'Nombre': forms.TextInput(attrs={'class': 'form-control'}),
             
         }
