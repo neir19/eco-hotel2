@@ -59,7 +59,7 @@ class RegistradorForm(forms.ModelForm):
             'documento': 'documento',
             'telefono': 'telefono',
             'estado': 'estado',
-            'observacion': 'observacion',
+            'observacion': 'observacion', 
         }
     widgets = {
             'nombre': forms.TextInput(attrs={'class': 'form-control'}),

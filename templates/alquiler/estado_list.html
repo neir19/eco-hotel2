@@ -1,0 +1,30 @@
+{%extends 'base/basehabitacion.html'%} 
+{% block content %}
+<a href="{% url 'Estado_crear' %}" class="btn btn-success">Agregar</a> 
+  
+      {% if object_list %}
+      <table class= "table table-bordered">
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>estado</td>
+            
+          </tr>
+        </thead>
+        <tbody>
+      {% for estado in object_list %}
+        <tr>
+          <td>{{estado.Nombre}}</td>
+          
+          <td>
+            <a class="btn btn-primary" href="{% url 'Estado_editar' estado.id%}">Editar</a>
+            <a class="btn btn-danger"  href="{% url 'Estado_eliminar' estado.id%}">eliminar</a>
+          </td>
+        </tr>
+      {%endfor%}
+      {%else%}
+      <h1>No hay registro de estado</h1>
+      {%endif%}
+    </tbody>
+  </table>
+{%endblock%}
