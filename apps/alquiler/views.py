@@ -13,7 +13,7 @@ def index(request):
 
 class AlquilerList(ListView):
     model=Alquiler
-    template_name='alquiler/alquiler_list.html'
+    template_name='alquiler/alquileer_list.html'
 
 class AlquilerCreate(CreateView):
     model=Alquiler
@@ -41,13 +41,13 @@ class RegistradorList(ListView):
 class RegistradorCreate(CreateView):
     model=Registrador
     form_class = RegistradorForm
-    template_name='alquiler/alquiler_form.html'
+    template_name='alquiler/alquileer_form.html'
     success_url = reverse_lazy('Registrador_listar')
 
 class RegistradorUpdate(UpdateView):
     model=Registrador
     form_class = RegistradorForm
-    template_name='alquiler/alquiler_form.html'
+    template_name='alquiler/alquileer_form.html'
     success_url = reverse_lazy('Registrador_listar')
 
 class RegistradorDelete(DeleteView):
