@@ -14,5 +14,5 @@ urlpatterns =[
   url(r'^estadolistar/', EstadoList.as_view(), name='Estado_listar'),
   url(r'^estadoform/', EstadoCrear.as_view(), name='Estado_crear'),
    url(r'^Estadoeditar/(?P<pk>\d+)', EstadoUpdate.as_view(), name='Estado_editar'),
-  url(r'^estadoeliminar/(?P<pk>\d+)', EstadoDelete.as_view(),name='Estado_eliminar'), 
+  url(r'^estadoeliminar/(?P<pk>\d+)', EstadoDelete.as_view(),name='Estado_eliminar'),  
 ]

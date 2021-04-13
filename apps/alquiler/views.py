@@ -71,5 +71,5 @@ class EstadoUpdate(UpdateView):
 class EstadoDelete(DeleteView):
     model=Estado
     template_name='alquiler/Estado_delete.html'
-    success_url = reverse_lazy('Estado_listar')
+    success_url = reverse_lazy('Estado_listar') 
 
