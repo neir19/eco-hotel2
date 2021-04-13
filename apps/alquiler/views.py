@@ -41,7 +41,7 @@ class RegistradorList(ListView):
 class RegistradorCreate(CreateView):
     model=Registrador
     form_class = RegistradorForm
-    template_name='alquiler/alquileer_form.html'
+    template_name='alquiler/alquiler_form.html'
     success_url = reverse_lazy('Registrador_listar')
 
 class RegistradorUpdate(UpdateView):
