@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from apps.alquiler.views import index, AlquilerList, AlquilerCreate,  AlquilerUpdate, AlquilerDelete, RegistradorList, RegistradorCreate, RegistradorUpdate, RegistradorDelete,EstadoList, EstadoCrear,EstadoUpdate, EstadoDelete
+from apps.alquiler.views import index, AlquilerList, AlquilerCreate,  AlquilerUpdate, AlquilerDelete, RegistradorList, RegistradorCreate, RegistradorUpdate, RegistradorDelete, EstadoList,EstadoCrear,EstadoUpdate,EstadoDelete
 
 urlpatterns =[
   url(r'^$',index),
@@ -13,6 +13,7 @@ urlpatterns =[
   url(r'^Reliminar/(?P<pk>\d+)', RegistradorDelete.as_view(), name='Registrador_eliminar'),
   url(r'^estadolistar/', EstadoList.as_view(), name='Estado_listar'),
   url(r'^estadoform/', EstadoCrear.as_view(), name='Estado_crear'),
-   url(r'^Estadoeditar/(?P<pk>\d+)', EstadoUpdate.as_view(), name='Estado_editar'),
-  url(r'^estadoeliminar/(?P<pk>\d+)', EstadoDelete.as_view(),name='Estado_eliminar'),  
+  url(r'^Estadoeditar/(?P<pk>\d+)', EstadoUpdate.as_view(), name='Estado_editar'),
+  url(r'^estadoeliminar/(?P<pk>\d+)', EstadoDelete.as_view(),name='Estado_eliminar'),   
+ 
 ]
